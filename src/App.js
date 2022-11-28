@@ -45,20 +45,22 @@ class App extends React.Component {
               Get Access
             </button>
           </div>
-
-          {issues.map(({ image, title, description }) => (
-            <div className="free-movie-container">
-              <img src={image} className="movies-logo"></img>
-              <div className="free-movies-container--dsc">
-                <h2>{title}</h2>
-                <p className="description">{description}</p>
-                <button type="submit" className="Favorite-Button">
-                  Favorite
-                </button>
+          <div className="free-movies-container">
+            {issues.map(({ image, title, description }) => (
+              <div className="free-movie-container">
+                <img src={image} className="movies-logo"></img>
+                <div className="free-movies-container--dsc">
+                  <h2>{title}</h2>
+                  <p className="description">{description}</p>
+                  <button type="submit" className="Favorite-Button">
+                    Favorite
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
-          {error && <p>Failed to Load content!</p>}
+            ))}
+
+            {error && <p>Failed to Load content!</p>}
+          </div>
         </body>
       </div>
     );
