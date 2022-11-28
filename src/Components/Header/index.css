@@ -1,0 +1,17 @@
+.Header-logo {
+  width: 30px;
+}
+
+.signInButton {
+  background-color: red;
+  color: white;
+  border: 0px;
+  padding: 5px 15px;
+  border-radius: 4px;
+}
+
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 20px;
+}

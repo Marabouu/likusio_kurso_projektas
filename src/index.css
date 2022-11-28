@@ -1,0 +1,59 @@
+p {
+  color: white;
+}
+h2 {
+  color: white;
+}
+.p1 {
+  color: white;
+  font-size: 48px;
+  margin-left: 0px;
+}
+.App {
+  background-color: black;
+  min-height: 100vh;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.movies-logo {
+  min-width: 270px;
+  height: 180px;
+}
+
+.free-movie-container {
+  background: grey;
+  width: 270px;
+  height: 335px;
+}
+
+.description {
+  font-size: 14px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-top: -15px;
+}
+
+.Favorite-Button {
+  background-color: red;
+  color: white;
+  border: 0px;
+  padding: 5px 15px;
+  border-radius: 4px;
+  margin-top: 50px;
+}
+
+.free-movies-container--dsc {
+  margin-top: -30px;
+  padding: 10px;
+}
+
+.Hero-container {
+  background-image: url('./images/hero_logo.jpeg');
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
