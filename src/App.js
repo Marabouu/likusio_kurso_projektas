@@ -2,8 +2,14 @@ import React from 'react';
 
 import './index.css';
 import Header from './Components/Header';
+import Footer from './Components/Footer';
 import HeaderLogo from './images/header_logo.png';
 import HeroLogo from './images/hero_logo.jpeg';
+import VisaLogo from './images/visa.png';
+import MastercardLogo from './images/mastercard.png';
+import AmexLogo from './images/amex.png';
+import DiscoverLogo from './images/discover.png';
+import FavoriteButton from './Components/Buttons/Favorite_Button';
 
 class App extends React.Component {
   state = {
@@ -48,19 +54,25 @@ class App extends React.Component {
           <div className="free-movies-container">
             {issues.map(({ image, title, description }) => (
               <div className="free-movie-container">
-                <img src={image} className="movies-logo"></img>
+                <div>
+                  <img src={image} className="movies-logo"></img>
+                </div>
                 <div className="free-movies-container--dsc">
-                  <h2>{title}</h2>
+                  <h3>{title}</h3>
                   <p className="description">{description}</p>
-                  <button type="submit" className="Favorite-Button">
-                    Favorite
-                  </button>
+                  <FavoriteButton></FavoriteButton>
                 </div>
               </div>
             ))}
 
             {error && <p>Failed to Load content!</p>}
           </div>
+          <Footer
+            imgSrc1={VisaLogo}
+            imgSrc2={MastercardLogo}
+            imgSrc3={AmexLogo}
+            imgSrc4={DiscoverLogo}
+          ></Footer>
         </body>
       </div>
     );

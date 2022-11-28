@@ -1,8 +1,9 @@
 p {
   color: white;
 }
-h2 {
+h3 {
   color: white;
+  font-size: 20px;
 }
 .p1 {
   color: white;
@@ -12,7 +13,7 @@ h2 {
 .App {
   background-color: black;
   min-height: 100vh;
-  max-width: 80%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -23,8 +24,8 @@ h2 {
 
 .free-movie-container {
   width: 270px;
-  height: 400px;
-  padding: 40px;
+  min-height: 350px;
+  padding: 0px 40px;
 }
 .free-movies-container {
   display: flex;
@@ -38,11 +39,12 @@ h2 {
 }
 
 .description {
-  font-size: 14px;
+  font-size: 13px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
   margin-top: -15px;
+  color: rgb(214, 213, 213);
 }
 
 .Favorite-Button {
