@@ -31,7 +31,7 @@ class App extends React.Component {
         this.setState({ error: true });
       } else {
         const json = await result.json();
-        this.setState({ issues: json });
+        this.setState({ movies: json });
       }
     } catch (error) {
       this.setState({ error: true });
@@ -41,20 +41,20 @@ class App extends React.Component {
   }
 
   render() {
-    const { loading, error, issues, movies } = this.state;
+    const { loading, error, issues, movies, favorites } = this.state;
     return (
       <div className="App">
-        <Header imgSrc={HeaderLogo}></Header>
+        <Header imgSrc={HeaderLogo} />
 
         <body className="Body-container">
           <div className="Hero-container">
             <p className="p1">Wanna more content ?</p>
-            <button type="submit" className="Favorite-Button">
+            <button type="button" className="Favorite-Button">
               Get Access
             </button>
           </div>
           <div className="free-movies-container">
-            {movies.map(({ image, title, description, favorites, id }) => (
+            {movies.map(({ image, title, description }) => (
               <div className="free-movie-container">
                 <div>
                   <img src={image} className="movies-logo"></img>
@@ -74,7 +74,7 @@ class App extends React.Component {
             imgSrc2={MastercardLogo}
             imgSrc3={AmexLogo}
             imgSrc4={DiscoverLogo}
-          ></Footer>
+          />
         </body>
       </div>
     );

@@ -2,7 +2,7 @@ import './index.css';
 
 function SignIn({}) {
   return (
-    <button type="submit" className="signInButton">
+    <button type="button" className="signInButton">
       Sign In
     </button>
   );
