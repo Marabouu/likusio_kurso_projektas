@@ -14,8 +14,10 @@ import FavoriteButton from './Components/Buttons/Favorite_Button';
 class App extends React.Component {
   state = {
     issues: [],
+    movies: [],
     loading: false,
     error: false,
+    favorites: [],
   };
 
   async componentDidMount() {
@@ -39,7 +41,7 @@ class App extends React.Component {
   }
 
   render() {
-    const { loading, error, issues } = this.state;
+    const { loading, error, issues, movies } = this.state;
     return (
       <div className="App">
         <Header imgSrc={HeaderLogo}></Header>
@@ -52,7 +54,7 @@ class App extends React.Component {
             </button>
           </div>
           <div className="free-movies-container">
-            {issues.map(({ image, title, description, id }) => (
+            {movies.map(({ image, title, description, favorites, id }) => (
               <div className="free-movie-container">
                 <div>
                   <img src={image} className="movies-logo"></img>
@@ -60,7 +62,7 @@ class App extends React.Component {
                 <div className="free-movies-container--dsc">
                   <h3>{title}</h3>
                   <p className="description">{description}</p>
-                  <FavoriteButton id={id} />
+                  <FavoriteButton id={id} favorites={favorites} />
                 </div>
               </div>
             ))}
