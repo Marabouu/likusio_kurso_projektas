@@ -52,7 +52,7 @@ class App extends React.Component {
             </button>
           </div>
           <div className="free-movies-container">
-            {issues.map(({ image, title, description }) => (
+            {issues.map(({ image, title, description, id }) => (
               <div className="free-movie-container">
                 <div>
                   <img src={image} className="movies-logo"></img>
@@ -60,7 +60,7 @@ class App extends React.Component {
                 <div className="free-movies-container--dsc">
                   <h3>{title}</h3>
                   <p className="description">{description}</p>
-                  <FavoriteButton></FavoriteButton>
+                  <FavoriteButton id={id} />
                 </div>
               </div>
             ))}
