@@ -54,7 +54,7 @@ class App extends React.Component {
             </button>
           </div>
           <div className="free-movies-container">
-            {movies.map(({ image, title, description }) => (
+            {movies.map(({ image, title, description, id }) => (
               <div className="free-movie-container">
                 <div>
                   <img src={image} className="movies-logo"></img>

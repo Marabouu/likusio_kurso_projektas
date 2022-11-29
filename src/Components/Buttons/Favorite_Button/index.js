@@ -1,9 +1,9 @@
 import './index.css';
 
-function AddFavorite({ id }) {
+function AddFavorite({ id, favorites }) {
   return (
-    <button type="submit" className="AddFavorite">
-      {this.state.AddFavorite.include(id) ? 'Remove Favorite' : 'Add Favorite'}
+    <button type="button" className="AddFavorite">
+      {favorites.includes(id) ? 'Remove Favorite' : 'Add Favorite'}
     </button>
   );
 }
